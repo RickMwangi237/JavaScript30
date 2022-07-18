@@ -65,6 +65,12 @@
 
     //Stop function from running if no audio element is present for key pressed
     if (!audio) return;
+
+    //Refresh audio element per keystroke(to play immediately per keystroke)
+    audio.currentTime = 0;
+
+    //play audio element 
+    audio.play();
   })
 </script>
 

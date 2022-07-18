@@ -63,6 +63,9 @@
     //Create referenceto audio element on the page that has data-key attribute
     const audio = document.querySelector(`audio[data-key = "${e.keyCode}"]`);
 
+    //Create a reference to key element
+    const key = document.querySelector(`.key[data-key = "${e.keyCode}"]`)
+
     //Stop function from running if no audio element is present for key pressed
     if (!audio) return;
 

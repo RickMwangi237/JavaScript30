@@ -60,7 +60,9 @@
 <script>
   //Add event listener on the window element for keydown event
   window.addEventListener('keydown', function(e){
-    console.log(e)
+    //Create referenceto audio element on the page that has data-key attribute
+    const audio = document.querySelector(`audio[data-key = "${e.keyCode}"]`);
+    console.log(audio)
   })
 </script>
 

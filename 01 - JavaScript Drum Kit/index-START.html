@@ -78,7 +78,21 @@
     //Add a class to the key element
     key.classList.add('playing');
 
-  })
+  });
+
+  function removeTransition(e){
+    //Skip if no transorm event is performed on a keystroke
+    if (e.propertyName !== 'transform') return;
+    
+    //Remove class playing from key after timeout
+    this.classList.remove('playing');
+  f};
+
+  // Create reference for all key elements on the page into an array
+  const keys = document.querySelectorAll('.key');
+
+  //listen for a transitionend event on each key in the keys array and call the removeTranition function upon each event
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 </script>
 
 
